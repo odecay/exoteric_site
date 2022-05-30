@@ -1,5 +1,6 @@
 +++
 title = "spa{ce}"
+draft = true
 [extra]
 state = "complete"
 +++

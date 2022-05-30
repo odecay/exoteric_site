@@ -4,6 +4,6 @@ title = "bullet_chasm"
 state = "ongoing"
 +++
 
-A 2.5d bullet hell inspired game made in Godot.
+A 2.5d bullet hell inspired game made in Godot(maybe?!)
 
 <!-- more -->
