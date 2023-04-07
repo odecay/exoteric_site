@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    
+    <link rel="stylesheet" href="https://odecay.github.io/exoteric_site/style.css?h=2c395be52512c3113128">
+    
+</head>
+<body>
+    
+    <header class="space">
+        <h1></h1>
+        
+        
+    </header>
+    
+    
+    
+    
+    <main>
+        
+        <div class="space">
+            <p>I am Otis. This is a public facing collection of my current <a href="https://odecay.github.io/exoteric_site/projects/">projects</a>.</p>
+<p>I am interested in Games, UI and Physical Interfaces, Group Formation, Group Learning and Collaborative Worldbuilding.
+I find myself drawn to things which embody Novelty, Efficiency, Autonomy (among other things).
+I find meaning and enjoyment in creative collaboration.</p>
+<ul>
+<li>I am currently looking for contract work in Game Design, Game or Tools Programming, Level Design, or Content Creation roles.</li>
+<li>I am generally interested in collaborating with people who have shared interests or goals, if you have a project you want me to work on with you or want to talk about one of my projects get in touch!</li>
+</ul>
+
+        </div>
+        
+        
+        <h2>Active Projects</h2>
+        <ul>
+            
+            
+            
+            
+            <li><a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;cccg&#x2F;">cccg</a></li>
+            
+            
+            
+            <li><a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;magic-set&#x2F;">magic_set</a></li>
+            
+            
+            
+            <li><a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;bullet-chasm&#x2F;">bullet_chasm</a></li>
+            
+            
+            
+            
+            
+            <li><a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;dream-hole-punch&#x2F;">dream_hole_punch</a></li>
+            
+            
+        </ul>
+        <h2>Past Projects</h2>
+        <ul>
+            
+            
+            <li><a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;fallen-down&#x2F;">fallen_down</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;planet-licker&#x2F;">planet licker</a></li>
+            
+            
+            
+            
+        </ul>
+        <!-- <p><a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;">Archive</a></p> -->
+        
+    </main>
+    
+    
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://odecay.github.io/exoteric_site/dark_mode.svg" width="24" height="24" alt=""></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://odecay.github.io/exoteric_site/light_mode.svg" width="24" height="24" alt=""></button>
+    </div>
+    <script>
+        const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>

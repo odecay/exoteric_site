@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> | fallen_down</title>
+    
+    <link rel="stylesheet" href="https://odecay.github.io/exoteric_site/style.css?h=2c395be52512c3113128">
+    
+</head>
+<body>
+    
+<header class="space">
+    <a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;">&LeftArrow; Home</a>
+</header>
+
+    
+<main>
+    <h1>fallen_down</h1>
+    
+    <div class="space"></div>
+    <p>A game about falling.</p>
+<span id="continue-reading"></span><iframe src="https://itch.io/embed-upload/3736766?color=000000" allowfullscreen="" width="1024" height="620" frameborder="0"><a href="https://sitonapanotis.itch.io/fallen-down">Play fallen_down on itch.io</a></iframe>
+<p>This game was originally made over the 48 hours of the LD48 compo.<br />
+The original submission is found <a href="https://sitonapanotis.itch.io/fallen-down">here</a>.
+Most of the intended mechanics were cut due to time constraints of the jam, and the game was tabled.
+Since then I have returned to the game and it is currently being reworked into <a href="https://odecay.github.io/exoteric_site/projects/bullet-chasm/">bullet_chasm</a>.</p>
+<p>This song is meant to accompany gameplay.
+<div class="video-container">
+    <iframe
+        src="https://www.youtube.com/embed/T4ne2Z7nYQ0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+    </iframe>
+</div>
+</p>
+
+</main>
+
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://odecay.github.io/exoteric_site/dark_mode.svg" width="24" height="24" alt=""></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://odecay.github.io/exoteric_site/light_mode.svg" width="24" height="24" alt=""></button>
+    </div>
+    <script>
+        const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>

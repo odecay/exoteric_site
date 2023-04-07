@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> | dream_hole_punch</title>
+    
+    <link rel="stylesheet" href="https://odecay.github.io/exoteric_site/style.css?h=2c395be52512c3113128">
+    
+</head>
+<body>
+    
+<header class="space">
+    <a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;">&LeftArrow; Home</a>
+</header>
+
+    
+<main>
+    <h1>dream_hole_punch</h1>
+    
+    <div class="space"></div>
+    <p>A series of talismans in etched silver and enamel inlay.</p>
+<span id="continue-reading"></span>
+<p><img src="https://odecay.github.io/exoteric_site/projects/dream-hole-punch/qwestchion.jpg" alt="Qwestchion" /></p>
+
+</main>
+
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://odecay.github.io/exoteric_site/dark_mode.svg" width="24" height="24" alt=""></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://odecay.github.io/exoteric_site/light_mode.svg" width="24" height="24" alt=""></button>
+    </div>
+    <script>
+        const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>

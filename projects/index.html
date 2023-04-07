@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> | Projects</title>
+    
+    <link rel="stylesheet" href="https://odecay.github.io/exoteric_site/style.css?h=2c395be52512c3113128">
+    
+</head>
+<body>
+    
+<header class="space">
+    <a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;">&LeftArrow; Home</a>
+</header>
+
+    
+<main>
+    <h1>Projects</h1>
+    
+    
+    <!-- <h2> -->
+      <!-- </h2> -->
+    <a href=" https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;fallen-down&#x2F;">fallen_down</a>
+    <p>A game about falling.</p>
+
+    
+    
+    <!-- <h2> -->
+      <!-- </h2> -->
+    <a href=" https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;cccg&#x2F;">cccg</a>
+    <p>A card game designed to be played asynchronously between many players.<br />
+The game revolves around the creation and exchange of cards.</p>
+
+    
+    
+    <!-- <h2> -->
+      <!-- </h2> -->
+    <a href=" https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;magic-set&#x2F;">magic_set</a>
+    <p>A puzzle game based on projected set pattern matching. Made in Rust + Bevy.</p>
+
+    
+    
+    <!-- <h2> -->
+      <!-- </h2> -->
+    <a href=" https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;bullet-chasm&#x2F;">bullet_chasm</a>
+    <p>A 2.5d bullet hell inspired game made in Godot(maybe?!)</p>
+
+    
+    
+    <!-- <h2> -->
+      <!-- </h2> -->
+    <a href=" https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;planet-licker&#x2F;">planet licker</a>
+    <p>An edible Alt-Ctrl game played with a conductive popsicle bearing controller.</p>
+
+    
+    
+    <!-- <h2> -->
+      <!-- </h2> -->
+    <a href=" https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;projects&#x2F;dream-hole-punch&#x2F;">dream_hole_punch</a>
+    <p>A series of talismans in etched silver and enamel inlay.</p>
+
+    
+    
+    
+
+</main>
+
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://odecay.github.io/exoteric_site/dark_mode.svg" width="24" height="24" alt=""></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://odecay.github.io/exoteric_site/light_mode.svg" width="24" height="24" alt=""></button>
+    </div>
+    <script>
+        const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>

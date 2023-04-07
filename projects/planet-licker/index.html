@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> | planet licker</title>
+    
+    <link rel="stylesheet" href="https://odecay.github.io/exoteric_site/style.css?h=2c395be52512c3113128">
+    
+</head>
+<body>
+    
+<header class="space">
+    <a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;">&LeftArrow; Home</a>
+</header>
+
+    
+<main>
+    <h1>planet licker</h1>
+    
+    <div class="space"></div>
+    <p>An edible Alt-Ctrl game played with a conductive popsicle bearing controller.</p>
+<span id="continue-reading"></span>
+<p><img src="https://odecay.github.io/exoteric_site/projects/planet-licker/planet_licker2.jpg.webp" alt="Planet Licker" /></p>
+<p><a href="https://a-o.in/games/pl/#content">Planet Licker</a> was conceived in 2015 for the LD33 jam and developed into 2016 when it was shown as part of the GDC alt.ctrl showcase.</p>
+<h3 id="press">Press</h3>
+<div class="video-container">
+    <iframe
+        src="https://www.youtube.com/embed/eysOtjfMBb4"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+    </iframe>
+</div>
+<ul>
+<li><a href="https://www.gamedeveloper.com/design/alt-ctrl-gdc-showcase-i-planet-licker-i-">gamedeveloper.com</a></li>
+<li><a href="https://killscreen.com/previously/articles/planet-licker-a-game-that-you-play-with-your-tongue/">Killscreen</a></li>
+<li><a href="https://www.pcgamer.com/planet-licker-is-a-game-you-literally-play-with-your-tongue/">PC Gamer</a></li>
+<li><a href="https://www.gameskinny.com/6tvco/planet-licker-the-game-you-lick-the-controller-to-play">Gameskinny</a></li>
+<li><a href="https://www.gamesradar.com/controller-licking-game-planet-licker/">Gamesradar</a></li>
+<li><a href="https://www.vice.com/en/article/8qvbkv/planet-licker-popsicle-controller-videogame">Vice</a></li>
+<li><a href="https://www.technologyreview.com/2016/06/28/108243/tasting-victory-why-gamers-are-hacking-taste-and-smell/">MIT Tech Review</a></li>
+</ul>
+
+</main>
+
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://odecay.github.io/exoteric_site/dark_mode.svg" width="24" height="24" alt=""></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://odecay.github.io/exoteric_site/light_mode.svg" width="24" height="24" alt=""></button>
+    </div>
+    <script>
+        const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>

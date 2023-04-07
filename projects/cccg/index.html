@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> | cccg</title>
+    
+    <link rel="stylesheet" href="https://odecay.github.io/exoteric_site/style.css?h=2c395be52512c3113128">
+    
+</head>
+<body>
+    
+<header class="space">
+    <a href="https:&#x2F;&#x2F;odecay.github.io&#x2F;exoteric_site&#x2F;">&LeftArrow; Home</a>
+</header>
+
+    
+<main>
+    <h1>cccg</h1>
+    
+    <div class="space"></div>
+    <p>A card game designed to be played asynchronously between many players.<br />
+The game revolves around the creation and exchange of cards.</p>
+<span id="continue-reading"></span>
+<p><img src="https://odecay.github.io/exoteric_site/projects/cccg/cccg_rules.png" alt="Rules" /></p>
+<h1 id="rules">Rules</h1>
+<p>block of rules, explanation</p>
+<h1 id="design-intent">Design Intent</h1>
+<p>The design of this game was after the fact influenced by
+<a href="https://en.wikipedia.org/wiki/1000_Blank_White_Cards">1000 Blank White Cards</a></p>
+<p>Here is a selection of cards made before the first playtest.
+This version was played digitally and mostly synchronously in one play session using a network share directory in which players exchanged cards.
+This set of cards played on the movement and positioning of cards within players' Active and Inactive collections.</p>
+<p><img src="https://odecay.github.io/exoteric_site/projects/cccg/ghost_kiss.png" alt="Ghost Kiss" />
+<img src="https://odecay.github.io/exoteric_site/projects/cccg/black_hole.png" alt="Black Hole" />
+<img src="https://odecay.github.io/exoteric_site/projects/cccg/milk_token.png" alt="Milk Token" />
+<img src="https://odecay.github.io/exoteric_site/projects/cccg/rage_token.png" alt="Rage Token" />
+<img src="https://odecay.github.io/exoteric_site/projects/cccg/mutate.png" alt="Mutate" />
+<img src="https://odecay.github.io/exoteric_site/projects/cccg/reach_through_the_veil.png" alt="Reach Through the Veil" />
+<img src="https://odecay.github.io/exoteric_site/projects/cccg/barter.png" alt="Barter" />
+<img src="https://odecay.github.io/exoteric_site/projects/cccg/reverbrrrr8.png" alt="Reverbrrrr8" />
+<img src="https://odecay.github.io/exoteric_site/projects/cccg/copy_protection_charm.png" alt="Copy Protection Charm" />
+<img src="https://odecay.github.io/exoteric_site/projects/cccg/first_out_last_in.png" alt="First out, Last in" /></p>
+
+</main>
+
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://odecay.github.io/exoteric_site/dark_mode.svg" width="24" height="24" alt=""></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://odecay.github.io/exoteric_site/light_mode.svg" width="24" height="24" alt=""></button>
+    </div>
+    <script>
+        const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://odecay.github.io/exoteric_site/sitemap.xml
